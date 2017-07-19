@@ -1,5 +1,5 @@
 const dgram = require('dgram');
-const server = dgram.createSocket('udp4');
+const server = dgram.createSocket({type:'udp4',reuseAddr:true});
 server.on('error', (err) => {
     console.log(`server error:\n${err.stack}`);
 server.close();
