@@ -14,7 +14,7 @@ server.on('message', (msg, rinfo) => {
 });
 
 server.on('listening', () => {
-    server.addMembership('239.255.255.250')
+    server.addMembership('224.1.1.1');
     const address = server.address();
 console.log(`server listening ${address.address}:${address.port}`);
 });
